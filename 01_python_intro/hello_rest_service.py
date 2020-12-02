@@ -1,14 +1,4 @@
-from flask import Flask, jsonify
-
-app = Flask(__name__)
-
-@app.route("/hello")
-def index():
-    return "Hello from REST Service!"
-
-@app.route("/api/tasks", methods=['GET'])
-def get_all_tasks():
-    return jsonify(tasks)
+from flask import Flask, jsonify, make_response
 
 tasks = [
     {
@@ -25,6 +15,15 @@ tasks = [
     }
 ]
 
+app = Flask(__name__)
+
+@app.route("/hello")
+def index():
+    return "Hello from REST Service!"
+
+@app.route("/api/tasks", methods=['GET'])
+def get_all_tasks():
+    return jsonify(tasks)
 
 if __name__ == '__main__':
     app.run(debug=True)
