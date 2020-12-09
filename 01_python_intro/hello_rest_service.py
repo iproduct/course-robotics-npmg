@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response, abort
 
 tasks = [
     {
@@ -24,6 +24,14 @@ def index():
 @app.route("/api/tasks", methods=['GET'])
 def get_all_tasks():
     return jsonify(tasks)
+
+@app.route("/api/tasks/<int:task_id>", methods=['GET'])
+def get_task_by_id(task_id):
+    task = [task for task in tasks if task['id'] == task_id]
+    if len(task) == 0:
+        abort(404)
+    return jsonify(task[0])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
