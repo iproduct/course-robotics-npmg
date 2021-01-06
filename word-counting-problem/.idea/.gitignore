@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../:\CourseRoboticsNPMG\git\course-robotics-npmg\numerology\.idea/dataSources/
+/../../../../../../:\CourseRoboticsNPMG\git\course-robotics-npmg\word-counting-problem\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
