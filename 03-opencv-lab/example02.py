@@ -14,9 +14,9 @@ if __name__ == '__main__':
     video = cv.VideoCapture(0)
     video.set(cv.CAP_PROP_FRAME_WIDTH, WIDTH)
     video.set(cv.CAP_PROP_FRAME_HEIGHT, HEIGHT)
-    video.set(cv.CAP_PROP_BRIGHTNESS, 125)
+    video.set(cv.CAP_PROP_BRIGHTNESS, 170)
 
-    cv.namedWindow("Video")
+    # cv.namedWindow("Video")
     kernel = np.ones((3, 3), np.uint8)
 
     while True:
@@ -26,6 +26,7 @@ if __name__ == '__main__':
         # img = cv.resize(img, (WIDTH, HEIGHT))
         # cv.resizeWindow("Video", WIDTH, HEIGHT)
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+        print(gray.shape)
         edges = cv.Canny(gray, 80, 200)
         dilated = cv.dilate(edges, kernel, iterations=1)
         eroded = cv.erode(dilated, kernel, iterations=1)
