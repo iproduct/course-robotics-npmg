@@ -5,7 +5,7 @@ WIDTH = 640
 HEIGHT = 480
 
 if __name__ == '__main__':
-    classifier = cv.CascadeClassifier('models/haarcascade_frontalface2.xml')
+    faceCascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     video = cv.VideoCapture(0)
     video.set(cv.CAP_PROP_FRAME_WIDTH, WIDTH)
@@ -16,7 +16,14 @@ if __name__ == '__main__':
         success, img = video.read()
         if not success:
             sys.exit("Could not find video.")
-        faces = classifier.detectMultiScale(img)
+        gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=9,
+            minSize=(30, 30),
+            flags=cv.CASCADE_SCALE_IMAGE
+        )
         for result in faces:
             x,y,w,h = result
             x1, y1 = x+w, y+w
