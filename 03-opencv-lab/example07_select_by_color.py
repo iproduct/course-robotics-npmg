@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import example06_img_stacking as stacking
+import example06_imgstacking as stacking
 
 def empty(arg):
     pass

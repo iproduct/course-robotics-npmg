@@ -15,12 +15,14 @@ if __name__ == '__main__':
     edges = cv.Canny(gray, 80, 200)
     kernel = np.ones((3, 3), np.uint8)
     dilated = cv.dilate(edges, kernel, iterations=1)
+    dilated3 = cv.dilate(edges, kernel, iterations=3)
     eroded = cv.erode(dilated, kernel, iterations=1)
 
     cv.imshow("Image", gray)
     # cv.imshow("Lena [blurred]", blurred)
     cv.imshow("Image [edge detection]", edges)
     cv.imshow("Image [edge dilated]", dilated)
+    cv.imshow("Image [edge dilated x 3]", dilated3)
     cv.imshow("Image [edge dilated eroded]", eroded)
 
     cv.waitKey(30000)

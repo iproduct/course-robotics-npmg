@@ -2,7 +2,9 @@ from __future__ import print_function
 import cv2 as cv
 import numpy as np
 
-image_file="resources/valve.png"
+# image_file="resources/valve.png"
+# image_file="resources/cards.jpg"
+image_file="resources/geometric-shapes.png"
 source_window = 'Source image'
 corners_window = 'Corners detected'
 max_thresh = 255
