@@ -22,13 +22,25 @@ stop_words = ["a", "at", "as", "about", "above", "after", "again", "against", "a
               "you", "you'd", "you'll", "you're", "you've", "your", "yours", "yourself",
               "yourselves"]
 
+def get_count(item):
+    return item[1]
+
 if __name__ == "__main__":
     file = open("wikipedia.txt", "rt", encoding="utf-8")
 
+    counts = dict()
     for line in file:
-        words = set(re.split("[\s\.,?!\[\]\(\)\'\"-=:;&]", line))
+        words = list(re.split("[\s\.,?!\[\]\(\)\'\"-=:;&]", line))
         # print(words)
         for w in words:
             if(len(w) <= 3 or w in stop_words):
                 continue
-            print(w)
+            # counts[w] = (counts[w] + 1) if w in counts else 1
+            if w in counts:
+                counts[w] = counts[w] + 1
+            else:
+                counts[w] = 1
+
+    wlist = list(counts.items())
+    wlist.sort(reverse=True, key=get_count)
+    print(wlist[:10])
