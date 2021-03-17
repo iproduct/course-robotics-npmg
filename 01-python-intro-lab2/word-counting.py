@@ -29,5 +29,6 @@ if __name__ == "__main__":
         words = set(re.split("[\s\.,?!\[\]\(\)\'\"-=:;&]", line))
         # print(words)
         for w in words:
-            if(len(w) <= 3):
+            if(len(w) <= 3 or w in stop_words):
                 continue
+            print(w)
