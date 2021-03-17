@@ -20,7 +20,7 @@ if __name__ == '__main__':
         cv2.imshow('frame', frame)
         n = n + 1
         if(n %100 == 0):
-            text = f"dataset/trayan/trayan{n // 100}.jpg"
+            text = f"dataset/newone/newone{n // 100}.jpg"
             cv2.imwrite(text, frame)
 
         if cv2.waitKey(10) & 0xFF == 27:

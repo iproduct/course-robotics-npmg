@@ -4,6 +4,7 @@ import argparse
 import imutils
 import time
 import cv2
+import os
 
 prototxt = 'face_detection_model/deploy.prototxt'
 caffemodel = 'face_detection_model/res10_300x300_ssd_iter_140000.caffemodel'
@@ -80,3 +81,4 @@ if __name__ == '__main__':
     # do a bit of cleanup
     cv2.destroyAllWindows()
     vs.stop()
+    os.exit(0)
