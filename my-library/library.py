@@ -1,4 +1,5 @@
 import re
+from book import Book
 
 LANGUAGES = ['English', 'Bulgarian', 'German', 'Russian']
 
@@ -16,33 +17,39 @@ def input_book():
     # input authors
     while True:
         answer = input('Input authors (comma separated):')
-        if len(title) >= 5:
+        if len(answer) >= 5:
             authors = answer.split(',')
             i = 0
             while i < len(authors):
                 authors[i] = authors[i].strip()
+                if authors[i] == '':
+                    authors.pop(i)
+                    continue
                 if len(authors[i]) < 5:
                     break
                 else:
                     i += 1
-        if i == len(authors):
-            break
+            if i == len(authors):
+                break
         print('Error: each author name should be at least 5 characters long.')
 
     # input tags
     while True:
-        answer = input('Input authors (comma separated):')
-        if len(title) >= 2:
+        answer = input('Input tags (comma separated):')
+        if len(answer) >= 2:
             tags = answer.split(',')
             i = 0
-            while i < len(authors):
-                tags[i] = authors[i].strip()
-                if len(authors[i]) < 2:
+            while i < len(tags):
+                tags[i] = tags[i].strip()
+                if tags[i] == '':
+                    tags.pop(i)
+                    continue
+                if len(tags[i]) < 2:
                     break
                 else:
                     i += 1
-        if i == len(tags):
-            break
+            if i == len(tags):
+                break
         print('Error: each tag should be at least 2 characters long.')
 
     # input year
@@ -56,10 +63,15 @@ def input_book():
     while True:
         langIndex = input('Input language 1) English, 2) Bulgarian, 3) German, 4) Russian:')
         if re.match(r'[1-4]', langIndex):
-            language = LANGUAGES[langIndex - 1]
+            language = LANGUAGES[int(langIndex) - 1]
             break
         print('Error: invalid language choice - try again.')
 
+    return Book(None, title, subtitle, authors, tags, year, language)
+
+if __name__ == '__main__':
+    b1 = input_book()
+    print(b1)
 
 
 
