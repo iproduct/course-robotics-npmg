@@ -13,7 +13,7 @@ WebServer server(80);
 
 void handleRoot() {
   //digitalWrite(led, 1);
-  server.send(200, "text/plain", "Hello from esp32!");
+  server.send(200, "text/html", "<h1>Hello from esp32!</h1><h2>Simple web server demo :)</h2>");
   //digitalWrite(led, 0);
 }
 
@@ -41,7 +41,8 @@ void setup(void) {
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   Serial.println("");
-
+  MDNS.begin("esp32_trayan");
+  
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -53,7 +54,7 @@ void setup(void) {
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 
-  if (MDNS.begin("esp32")) {
+  if (MDNS.begin("esp32_trayan")) {
     Serial.println("MDNS responder started");
   }
 

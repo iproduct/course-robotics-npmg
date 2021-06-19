@@ -1,2 +1,0 @@
-#define SECRET_SSID "Tech_D3817913"
-#define SECRET_PASS "UESKXJDM"
