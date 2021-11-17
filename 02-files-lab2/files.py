@@ -1,7 +1,14 @@
 
 if __name__ == '__main__':
-    l = [line for line in open("wikipedia.txt", "rt") if ]
-    n = 0
-    for line in l:
-        n += 1
-        print(n, ":", line, end="")
+    # file = open("wikipedia.txt", "rt")
+    with open("wikipedia.txt", "rt") as file:
+        lines = [line for line in file if len(line.strip()) > 0]
+        words = set()
+        for line in lines:
+            words.update({word for word in line.split()})
+
+        n = 0
+        for word in words:
+            n += 1
+            print(n, ":", word, end="\n")
+    # file.close()
