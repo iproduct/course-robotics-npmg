@@ -3,7 +3,7 @@ if __name__ == '__main__':
     # file = open("wikipedia.txt", "rt")
     with open("wikipedia.txt", "rt") as file:
         lines = [line for line in file if len(line.strip()) > 0]
-        words = set()
+        words = dict()
         for line in lines:
             words.update({word for word in line.split()})
 
