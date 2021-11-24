@@ -1,3 +1,4 @@
+"""File read write demo script"""
 
 def find_count(substring, string):
     counter = 0
@@ -20,4 +21,4 @@ if __name__ == "__main__":
                 if start_of_comment > 0 and quote_count % 2 == 0 and double_quote_count % 2 == 0:
                     comment = line[start_of_comment:] # get comment only string
                     print(comment, end="") # print comment
-                    out.write(line) # write to file
+                    out.write(comment) # write to file
