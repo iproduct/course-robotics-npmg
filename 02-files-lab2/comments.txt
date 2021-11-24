@@ -1,0 +1,5 @@
+    with open("read_write_file.py", "rt") as f: # read file with automatic closing
+            for line in f: # read one line
+                    comment = line[start_of_comment:] # get comment only string
+                    print(comment, end="") # print comment
+                    out.write(line) # write to file
