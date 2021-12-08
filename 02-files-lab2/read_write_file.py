@@ -1,6 +1,7 @@
 """File read write demo script"""
 
 def find_count(substring, string):
+    """finds the number of occurences of substring in string"""
     counter = 0
     index = string.find(substring)
     while index >= 0:

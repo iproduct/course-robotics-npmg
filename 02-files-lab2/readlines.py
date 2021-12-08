@@ -11,12 +11,12 @@ if __name__ == "__main__":
         line = f.readline()
         while len(line) > 0:
             print(line.strip(), end="\n")
-            line  = f.readline()
+            line = f.readline()
 
     with open("readlines.py", "rt") as f:
         for line in f:
             print(line, end="")
 
-
-
-
+    with open("readlines.py", "rt") as f:
+        for index, line in enumerate(f):
+            print(index + 1, ":", line, end="")
