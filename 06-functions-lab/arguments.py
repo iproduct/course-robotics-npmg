@@ -1,8 +1,10 @@
 def some_fun(name, /, pos_or_keyword, *a, content, **b):
     print("Positional args:\n", name, "\n", pos_or_keyword, sep="")
+    print("*a:")
     for i in a:
         print(i)
     print("\nKeyword args:\n", content, sep="")
+    print("**b:")
     for key, val in b.items():
         print(key, "->", val)
 
