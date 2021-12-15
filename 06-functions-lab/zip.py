@@ -6,5 +6,6 @@ if __name__ == '__main__':
     print( full_name_list)
 
     # unzip
+    print(*full_name_list)
     first_name, last_name, age = list(zip(*full_name_list))
     print(f"first name: {first_name}\nlast name: {last_name} \nage: {age}")
