@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6319312-5553-49af-9fb4-018be77e51d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lambdas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reduce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06-functions-lab/zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/../06-functions-lab/zip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/06-functions-lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/06-functions-lab2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,15 +119,27 @@
       <option name="presentableId" value="Default" />
       <updated>1638976992098</updated>
       <workItem from="1638976993527" duration="737000" />
-      <workItem from="1639572329873" duration="7172000" />
+      <workItem from="1639572329873" duration="7493000" />
     </task>
+    <task id="LOCAL-00001" summary="functional exercises added">
+      <created>1639581890180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639581890180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="functional exercises added" />
+    <option name="LAST_COMMIT_MESSAGE" value="functional exercises added" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/06_functions_lab2$functions.coverage" NAME="functions Coverage Results" MODIFIED="1639581546679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/06_functions_lab2$functions.coverage" NAME="functions Coverage Results" MODIFIED="1639581755494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_functions_lab2$reduce.coverage" NAME="reduce Coverage Results" MODIFIED="1639580387135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_functions_lab2$lambdas.coverage" NAME="lambdas Coverage Results" MODIFIED="1639577236568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
