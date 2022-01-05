@@ -16,8 +16,8 @@ class Book(object):
        self.description = description
 
     def __str__(self):
-        return f"| {self.id:^3.3s} | {self.title:<22.22s} | {self.subtitle:<22.22s} | " \
-               f"{','.join(self.authors):^25.25s} | {self.isbn:^10.10s} | {self.publisher:^10.10s} | " \
-               f"{self.year:<4d} | {self.price:<6.2f} | {self.genre:<15.15s} | " \
-               f"{','.join(self.tags):^25.25s} |"
+        return f"| {self.id:>28.28s} | {self.title:<20.20s} | {self.subtitle:<20.20s} | " \
+               f"{','.join(self.authors):^15.15s} | {self.isbn:^10.10s} | {self.publisher:^10.10s} | " \
+               f"{self.year:<4d} | {self.price:<6.2f} | {self.genre:<10.10s} | " \
+               f"{','.join(self.tags):^20.20} |"
 
